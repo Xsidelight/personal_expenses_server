@@ -25,10 +25,25 @@ Server listening on port 8080
 And then from a second terminal:
 ```
 $ curl http://0.0.0.0:8080
-Hello, World!
 ```
 
 You should see the logging printed in the first terminal:
 ```
 2021-05-06T15:47:04.620417  0:00:00.000158 GET     [200] /
 ```
+# Requests Overview
+
+This sample code handles following requests:
+### GET
+  - `/expenses` - this request will fetch all the available expenses in the list.
+  - `/expense/<id>` -this request will fetch `Expense` according to `id` that was parsed
+
+### POST
+  - `/add-expense` - this request will add new `Expense` to the list, with JSON body that was attached.
+
+### DELETE 
+  - `/delete-expense/<id>` - this request will delete `Expense` according to `id` that was parsed.
+
+### PUT
+  - `/update-expense` - this request will update and replace the `Expense` with same `id`.
+
